@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yüklenme Ekranı</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background video-container noselect">
+        <iframe width="150%" height="150%" src="https://www.youtube.com/embed/yz3VUMpdjfE?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="loadingScreen">
+        <canvas id="bgCanvas"></canvas>
+        <div id="logoContainer" style="position:absolute; left: 32%;">
+            <div id="textContainer">
+                <p id="mainText">Hesth Development</p>
+                <p id="loadingText">Yüklenme Ekranı</p>
+            </div>
+        </div>
+
+        <div id="audioPlayerContainer">
+            <audio id="audioPlayer" src="song.mp3" autoplay="true" hidden="true" loop="true"></audio>
+            <div id="playPauseButton" class="playerButton">Durdur</div>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+        </div>
+        
+        <div id="teamContainer">
+            <h2 id="teamHeader">Yetkili Ekibi</h2>
+            <div class="person">
+                <img src="img/logo.jpg">
+                <span class="menu-text">Hesth<br>
+                    <div class="owner-role">Developer</div>
+                </span>
+            </div>
+        </div>
+
+        <div id="serverInfoContainer">
+            <h2 id="serverInfoHeader">Sunucu Kuralları</h2>
+            <p id="serverInfoText">
+                Sunucu kurallarına uymayan oyuncular cezalandırılır!<br>
+                ADK , MDK , DDK Yasaktır!
+                TT , RDM , VDM Yasaktır!
+                Dolandırıcılık yasaktır!
+                GBI Yasaktır!
+            </p>
+        </div>
+
+        <div id="updatesContainer">
+            <h2 id="updatesHeader">Yenilikler</h2>
+            <div class="updateItem">
+                <img src="img/updates.png" alt="Develop Icon" class="updateIcon">
+                <div class="updateContent">
+                    <h3 class="updateTitle">Güncelleme V1.0</h3>
+                    <p class="updateText">Hesth Loading</p>
+                    <p class="updateDate">Tarih: 22.12.2024  </p>
+                </div>
+            </div>
+            <div class="updateItem">
+                <img src="img/updates.png" alt="Develop Icon" class="updateIcon">
+                <div class="updateContent">
+                    <h3 class="updateTitle">Güncelleme V1.1</h3>
+                    <p class="updateText">Hesth Loading</p>
+                    <p class="updateDate">Tarih: 22.12.2024</p>
+                </div>
+            </div>
+            <div class="updateItem">
+                <img src="img/updates.png" alt="Develop Icon" class="updateIcon">
+                <div class="updateContent">
+                    <h3 class="updateTitle">Güncelleme V1.2</h3>
+                    <p class="updateText">Hesth Loading</p>
+                    <p class="updateDate">Tarih: 22.12.2024</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="socialLinks">
+            <a href="#" onclick="window.invokeNative('openUrl', 'https://discord.gg/wDUAGjwzSA'); return false;" class="socialLink">
+                <img src="img/discord.png" alt="Discord Logo" />
+            </a>
+            <a href="#" onclick="window.invokeNative('openUrl', 'https://github.com/HesthXD'); return false;" class="socialLink">
+                <img src="img/web.png" alt="Web Logo" />
+            </a>
+            <a href="#" onclick="window.invokeNative('openUrl', 'https://instagram.com/'); return false;" class="socialLink">
+                <img src="img/instagram.png" alt="Instagram Logo" />
+            </a>
+            <a href="#" onclick="window.invokeNative('openUrl', 'https://www.youtube.com/'); return false;" class="socialLink">
+                <img src="img/youtube.png" alt="YouTube Logo" />
+            </a>
+        </div>
+
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+        </div>
+
+        <div id="percentage">Yükleniyor..</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
